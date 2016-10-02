@@ -15,7 +15,7 @@ class ProgressBar {
 
     public function add_bar($percentage, $attributes = array()) {
         if (!empty($this->current_progress_bar)) {
-            $this->progress_bar = $this->current_progress_bar;
+            $this->progress_bar[] = $this->current_progress_bar;
             $this->current_progress_bar = NULL;
         }
         $this->current_progress_bar = array(
@@ -94,8 +94,8 @@ class ProgressBar {
             if (isset($progress_bar['type'])) {
                 $class[] = $this->progress_bar_class . '-bar-' . $progress_bar['type'];
             }
-            if ($this->current_progress_bar['show_value']) {
-                $value = $this->current_progress_bar['value'];
+            if ($progress_bar['show_value']) {
+                $value = $progress_bar['value'];
             }
             if (!empty($progress_bar['state'])) {
                 $class[] = $progress_bar['state'];
