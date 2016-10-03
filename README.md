@@ -2,6 +2,7 @@
 Version 0.1.0 Beta
 
 [![Build Status](https://travis-ci.org/darkknight13/php-bootstrap.svg?branch=master)](https://travis-ci.org/darkknight13/php-bootstrap)
+[![Coverage Status](https://coveralls.io/repos/github/darkknight13/php-bootstrap/badge.svg?branch=master)](https://coveralls.io/github/darkknight13/php-bootstrap?branch=master)
 
 This is a PHP Library to generate Bootstrap HTML
 
