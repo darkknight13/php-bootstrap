@@ -1,4 +1,8 @@
 # php-bootstrap
+Version 0.1.0 Beta
+
+[![Build Status](https://travis-ci.org/darkknight13/php-bootstrap.svg?branch=master)](https://travis-ci.org/darkknight13/php-bootstrap)
+
 This is a PHP Library to generate Bootstrap HTML
 
 ## Progress Bar
