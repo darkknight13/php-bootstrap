@@ -1,0 +1,7 @@
+{
+    "name": "darkknight13/php-bootstrap",
+    "description": "This is a PHP Library to generate Bootstrap HTML",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+    }
+}
