@@ -8,31 +8,36 @@
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <title>Notification</title>
 </head>
-<body>
+<body style="width:75%;padding-top:15px;margin:auto auto">
 <?php 
 include_once 'Extras/SanitizeFile.inc';
 use Bootstrap\Panel as Bootstrap_Panel;
 use Bootstrap\Tab as Bootstrap_Tab;
 use Bootstrap\Button as Bootstrap_Button;
 use Bootstrap\ProgressBar as Bootstrap_ProgressBar;
+use Bootstrap\Form as Bootstrap_Form;
 require_once 'Bootstrap\Panel.inc';
 require_once 'Bootstrap\Tab.inc';
 require_once 'Bootstrap\Button.inc';
 require_once 'Bootstrap\ProgressBar.inc';
-
-echo SanitizeFile::initiate('/www/htdocs/inc/rm backup | md pipe * & % * | cd pipe.php')->sanitizeFileName();
+require_once 'Bootstrap\Form.inc';
+// echo SanitizeFile::initiate('/www/htdocs/inc/rm backup | md pipe * & % * | cd pipe.php')->sanitizeFileName();
 $html = Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('deafult')->showtext()->striped()->state('active')->generate();
-$html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('info')->showtext()->state('active')->generate();
-$html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('success')->showtext()->generate();
-$html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('warning')->showtext()->generate();
-$html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('danger')->showtext()->generate();
-$html .= Bootstrap_ProgressBar::initiate('ticket')
-        ->add_bar('10')->type('default')->showtext()->striped()->state('active')
-        ->add_bar('15')->type('info')->showtext()->striped()->state('active')
-        ->add_bar('20')->type('danger')->showtext()->striped()->state('active')
-        ->add_bar('25')->type('success')->showtext()->striped()->state('active')
-        ->add_bar('30')->type('warning')->showtext()->striped()->state('active')
-        ->generate();
+// $html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('info')->showtext()->state('active')->generate();
+// $html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('success')->showtext()->generate();
+// $html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('warning')->showtext()->generate();
+// $html .= Bootstrap_ProgressBar::initiate('ticket')->add_bar('60')->type('danger')->showtext()->generate();
+// $html .= Bootstrap_ProgressBar::initiate('ticket')
+//         ->add_bar('10')->type('default')->showtext()->striped()->state('active')
+//         ->add_bar('15')->type('info')->showtext()->striped()->state('active')
+//         ->add_bar('20')->type('danger')->showtext()->striped()->state('active')
+//         ->add_bar('25')->type('success')->showtext()->striped()->state('active')
+//         ->add_bar('30')->type('warning')->showtext()->striped()->state('active')
+//         ->generate();
+
+$html = Bootstrap_Form::initiate()
+->add_element('input','name','text')->label('Name')
+->add_element('input','address','text')->label('Address')->generate();
 echo $html;
 ?>
 </body>
