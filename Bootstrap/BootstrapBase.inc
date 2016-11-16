@@ -41,7 +41,7 @@ class BootstrapBase{
     public function emptyTag($tag){
         $empty_tag_list = array('input');
         if(in_array($tag, $empty_tag_list)){
-            return $true;
+            return true;
         }
     }
     protected function preprocess($item) {
